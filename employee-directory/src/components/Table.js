@@ -2,7 +2,7 @@ import React from "react";
 import DataCard from "./DataCard";
 import "../styles/Table.css";
 
-function Table({ heading, users, handleSort }) {
+function Table({ headings, users, handleSort }) {
     return (
         <div className="datatable mt-5">
             <table className="table table-striped table-hover table-condensed" id="table">
