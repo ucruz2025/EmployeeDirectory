@@ -58,16 +58,17 @@ class Data extends Component {
         this.setState({filteredUsers: sortedUsers});
     }
 
-    handleSearchChange = (event) => {
+    handleSearchChange = event => {
         console.log(event.target.value);
-        const filter = event.target.vaule;
+        const filter = event.target.value;
         const filteredList = this.state.users.filter(item => {
-            let value = Object.values(item).join("").toLowerCase();
-            return value.indexOf(filter.toLowerCase()) !== -1;
+          let values = Object.values(item)
+            .join("")
+            .toLowerCase();
+          return values.indexOf(filter.toLowerCase()) !== -1;
         });
-
-        this.setState({filteredUsers: filteredList});
-    }
+        this.setState({ filteredUsers: filteredList });
+      }
 
     componentDidMount() {
         API.getUsers().then(results => {

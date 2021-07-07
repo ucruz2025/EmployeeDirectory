@@ -3,8 +3,8 @@ import "../styles/SearchBox.css";
 
 function SearchBox({ handleSearchChange }) {
     return (
-        <div>
-            <form>
+        <div className="searchbox">
+            <form className="form-inline">
                 <input
                     className="form-control"
                     type="search"
@@ -14,7 +14,7 @@ function SearchBox({ handleSearchChange }) {
                 />
             </form>
         </div>
-    )
+    );
 }
 
 export default SearchBox;
